@@ -438,7 +438,7 @@ export class HTTPRequest {
     // Request interception is not supported for data: urls.
     if (this._url.startsWith('data:')) return;
     assert(this._allowInterception, 'Request Interception is not enabled!');
-    assert(!this._interceptionHandled, 'Request is already handled!');
+    // assert(!this._interceptionHandled, 'Request is already handled!');
     if (priority === undefined) {
       return this._continue(overrides);
     }
